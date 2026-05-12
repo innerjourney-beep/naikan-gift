@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>読者限定3大特典｜本物の内観</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #f5f8f6;
+      color: #1a2e24;
+      font-family: 'Noto Sans JP', sans-serif;
+      line-height: 1.9;
+      font-weight: 400;
+    }
+
+    .wrap {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 64px 0 72px;
+      text-align: center;
+      border-bottom: 1px solid #d0e0d8;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 5px;
+      color: #2d6a4f;
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    .hero-book-cover {
+      width: 160px;
+      border-radius: 6px;
+      box-shadow: 0 12px 40px rgba(27,77,56,0.25), 0 4px 12px rgba(0,0,0,0.1);
+      margin: 0 auto 40px;
+      display: block;
+    }
+
+    .hero-label {
+      display: inline-block;
+      background: #e4f0e9;
+      border: 1px solid #b8d8c4;
+      border-radius: 4px;
+      padding: 6px 18px;
+      font-size: 13px;
+      color: #2d6a4f;
+      margin-bottom: 36px;
+      letter-spacing: 1px;
+    }
+
+    .hero-main {
+      font-family: 'Shippori Mincho B1', serif;
+      font-size: clamp(26px, 6.5vw, 40px);
+      font-weight: 700;
+      line-height: 1.55;
+      color: #1a2e24;
+      margin-bottom: 24px;
+    }
+
+    .hero-main span { color: #b8924a; }
+
+    .hero-sub {
+      font-size: 15px;
+      color: #3a5a48;
+      line-height: 2.1;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 64px 0;
+      border-bottom: 1px solid #d8eae0;
+    }
+
+    .section-eyebrow {
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: #2d6a4f;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-family: 'Shippori Mincho B1', serif;
+      font-size: clamp(20px, 5vw, 26px);
+      font-weight: 600;
+      line-height: 1.7;
+      color: #1a2e24;
+      margin-bottom: 28px;
+    }
+
+    /* EMPATHY */
+    .empathy-list {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+
+    .empathy-list li {
+      font-size: 15px;
+      color: #2a4a38;
+      padding: 13px 0 13px 16px;
+      border-bottom: 1px solid #d8eae0;
+      position: relative;
+      line-height: 1.8;
+    }
+
+    .empathy-list li:first-child { border-top: 1px solid #d8eae0; }
+
+    .empathy-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 21px;
+      width: 6px;
+      height: 1px;
+      background: #7aaa90;
+    }
+
+    .body-text {
+      font-size: 15px;
+      color: #3a5a48;
+      line-height: 2.1;
+    }
+
+    .body-text p { margin-bottom: 12px; }
+    .body-text p:last-child { margin-bottom: 0; }
+
+    /* GIFT MAIN */
+    .gift-main-card {
+      background: #fff;
+      border: 1px solid #b8d8c4;
+      border-top: 3px solid #2d6a4f;
+      border-radius: 12px;
+      padding: 36px;
+      margin: 36px 0 16px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(27,77,56,0.06);
+    }
+
+    .gift-badge {
+      position: absolute;
+      top: -1px;
+      right: 28px;
+      background: #b8924a;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 4px 14px;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .gift-no {
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: #2d6a4f;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .gift-title {
+      font-family: 'Shippori Mincho B1', serif;
+      font-size: clamp(18px, 4.5vw, 22px);
+      font-weight: 700;
+      color: #1a2e24;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .gift-body {
+      font-size: 15px;
+      color: #3a5a48;
+      line-height: 2.1;
+      margin-bottom: 24px;
+    }
+
+    .gift-body strong { color: #2d6a4f; font-weight: 500; }
+
+    .gift-timing {
+      font-size: 13px;
+      color: #b8924a;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+
+    /* GIFT SUB */
+    .gift-sub-card {
+      background: #fff;
+      border: 1px solid #d8eae0;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 10px rgba(27,77,56,0.04);
+    }
+
+    .gift-sub-card:last-child { margin-bottom: 0; }
+
+    .gift-sub-title {
+      font-family: 'Shippori Mincho B1', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #1a2e24;
+      margin-bottom: 10px;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    .gift-sub-body {
+      font-size: 14px;
+      color: #3a5a48;
+      line-height: 2;
+      margin-bottom: 12px;
+    }
+
+    .gift-sub-timing {
+      font-size: 13px;
+      color: #2d6a4f;
+      letter-spacing: 1px;
+    }
+
+    /* FLOW */
+    .flow-list {
+      list-style: none;
+      margin-top: 28px;
+    }
+
+    .flow-item {
+      display: flex;
+      gap: 20px;
+      padding-bottom: 28px;
+      position: relative;
+    }
+
+    .flow-item:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 34px;
+      width: 1px;
+      height: calc(100% - 12px);
+      background: #c8ddd2;
+    }
+
+    .flow-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid #b8d8c4;
+      background: #e4f0e9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      color: #2d6a4f;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .flow-when {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #2d6a4f;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .flow-what {
+      font-size: 15px;
+      color: #1a2e24;
+      line-height: 1.6;
+    }
+
+    .flow-note {
+      font-size: 13px;
+      color: #2d6a4f;
+      margin-top: 4px;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 72px 0 96px;
+      text-align: center;
+    }
+
+    .cta-title {
+      font-family: 'Shippori Mincho B1', serif;
+      font-size: clamp(20px, 5vw, 26px);
+      font-weight: 700;
+      color: #1a2e24;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .cta-desc {
+      font-size: 14px;
+      color: #3a5a48;
+      line-height: 2;
+      margin-bottom: 36px;
+    }
+
+    .cta-btn {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 16px;
+      padding: 20px;
+      background: #1b4d38;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: 'Noto Sans JP', sans-serif;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      line-height: 1.5;
+    }
+
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .cta-note {
+      font-size: 13px;
+      color: #8aaa98;
+      line-height: 1.9;
+      margin-bottom: 36px;
+    }
+
+    .cta-author {
+      font-size: 13px;
+      color: #2d6a4f;
+    }
+
+    .cta-author strong {
+      display: block;
+      font-size: 15px;
+      color: #2d6a4f;
+      margin-bottom: 2px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 11px;
+      color: #8aaa98;
+      border-top: 1px solid #d8eae0;
+    }
+
+    @media (max-width: 480px) {
+      .gift-main-card { padding: 28px 20px; }
+      .gift-sub-card { padding: 22px 18px; }
+    }
+
+    .gift-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0 24px;
+      display: block;
+      object-fit: cover;
+      max-height: 240px;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="hero-eyebrow">KINDLE READER SPECIAL GIFT</span>
+    <img class="hero-book-cover" src="book-cover.jpg" alt="本物の内観 表紙">
+    <div class="hero-label">『本物の内観』読者限定</div>
+    <h1 class="hero-main">
+      「わかった」の次を、<br>
+      <span>3つの特典</span>で届けます。
+    </h1>
+    <p class="hero-sub">
+      本を読み終わって、こう感じませんでしたか？<br>
+      「理屈はわかった。でも実際の内観って、どうやるの？」<br>
+      「自分が感じているのは、感情？それとも思考？」<br>
+      そのモヤモヤを、この3つで解決します。
+    </p>
+  </section>
+
+  <!-- EMPATHY -->
+  <section class="section">
+    <span class="section-eyebrow">FOR READERS</span>
+    <h2 class="section-title">本を読んだ後に残る、<br>こんなモヤモヤありませんか？</h2>
+    <ul class="empathy-list">
+      <li>内観のプロセスは理解できた。でも実際にやってみると、合ってるのかわからない</li>
+      <li>実際に内観している人のノートってどうなってるんだろう？リアルな落とし込みが見たい</li>
+      <li>感情と思考の違い、頭ではわかったけど自分が今どっちにいるのか自信がない</li>
+      <li>内観しようとしても、何から書き始めればいいかわからなくて手が止まる</li>
+    </ul>
+    <div class="body-text">
+      <p>全部、そのままにしないでください。</p>
+      <p>「わかった」を「できる」に変えるために、3つの特典を用意しました。</p>
+    </div>
+  </section>
+
+  <!-- GIFT -->
+  <section class="section">
+    <span class="section-eyebrow">3 SPECIAL GIFTS</span>
+    <h2 class="section-title">読者限定、3大特典。</h2>
+
+    <div class="gift-main-card">
+      <div class="gift-badge">目玉特典</div>
+      <span class="gift-no">GIFT 01</span>
+      <h3 class="gift-title">感度チェック診断</h3>
+      <p class="gift-body">
+        あなたが「感じている」と思っているのは、本当に感情ですか？<br><br>
+        質問に答えるだけで、<strong>自分が今どの立ち位置にいるか</strong>がわかる診断アプリ。思考を感情だと思い込んでいる、無自覚に感じることを避けている——そんな人に「あ、これ私だ」というアハ体験を起こすために作りました。<br><br>
+        診断結果には日常の具体的なシーンを載せています。「こういう人、身近にいませんか？」という問いかけで、気づいていなかった自分の癖が見えてきます。
+      </p>
+      <span class="gift-timing">▷ 登録直後に自動でお届け</span>
+      <img class="gift-img" src="2.jpg" alt="感度チェック診断アプリ">
+    </div>
+
+    <div class="gift-sub-card">
+      <span class="gift-no">GIFT 02</span>
+      <h3 class="gift-sub-title">ジャーナリング基本習慣<br>21日プログラム</h3>
+      <p class="gift-sub-body">
+        内観の前に必要なのは、自分の思考を言語化する習慣。毎日1問だけ、自分に問いかけて書く21日間のプログラム。「慣れる→気づく→深める」の3段階で、無理なく自己観察の力が育っていきます。
+      </p>
+      <span class="gift-sub-timing">▷ 翌日にお届け</span>
+      <img class="gift-img" src="1.jpg" alt="ジャーナリング21日プログラム">
+    </div>
+
+    <div class="gift-sub-card">
+      <span class="gift-no">GIFT 03</span>
+      <h3 class="gift-sub-title">内観実演ノート<br>赤裸々大公開</h3>
+      <p class="gift-sub-body">
+        内観の方法はわかった。でも実際どう落とし込むの？——その疑問に答えるために、恋愛・お金・人間関係のテーマで実際の内観ノートを丸ごと公開します。「こうやって掘り下げるのか」という気づきが、あなたの内観を一気に変えます。
+      </p>
+      <span class="gift-sub-timing">▷ 翌々日にお届け</span>
+      <img class="gift-img" src="21 days.jpg" alt="内観実演ノート">
+    </div>
+  </section>
+
+  <!-- FLOW -->
+  <section class="section">
+    <span class="section-eyebrow">HOW IT WORKS</span>
+    <h2 class="section-title">特典の届き方</h2>
+    <ul class="flow-list">
+      <li class="flow-item">
+        <div class="flow-icon">登録</div>
+        <div>
+          <span class="flow-when">メルマガ登録直後</span>
+          <div class="flow-what">感度チェック診断のURLが届く</div>
+          <div class="flow-note">まず自分の今の立ち位置を確認してみてください</div>
+        </div>
+      </li>
+      <li class="flow-item">
+        <div class="flow-icon">Day1</div>
+        <div>
+          <span class="flow-when">翌日</span>
+          <div class="flow-what">ジャーナリング21日プログラムが届く</div>
+          <div class="flow-note">毎日1問、自分と向き合う習慣をはじめましょう</div>
+        </div>
+      </li>
+      <li class="flow-item">
+        <div class="flow-icon">Day2</div>
+        <div>
+          <span class="flow-when">翌々日</span>
+          <div class="flow-what">内観実演ノートが届く</div>
+          <div class="flow-note">実際の落とし込みを見て、自分の内観と照らし合わせてみてください</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <span class="section-eyebrow" style="display:block;margin-bottom:20px;">NEWSLETTER</span>
+    <h2 class="cta-title">特典はメルマガ登録後に<br>順番にお届けします。</h2>
+    <p class="cta-desc">
+      メールアドレスだけで登録できます。<br>
+      登録直後に、感度チェック診断のURLが届きます。
+    </p>
+    <a href="https://my949p.com/p/r/19wQ9UhT" class="cta-btn">
+      無料で3大特典を受け取る →
+    </a>
+    <p class="cta-note">
+      ※ 登録無料。不要になればいつでも配信停止できます。<br>
+      ※ MyAspの登録フォームに移動します。
+    </p>
+    <div class="cta-author">
+      <strong>なるいまい</strong>
+      ブロック外しセラピスト｜Kindle著者
+    </div>
+  </section>
+
+</div>
+<footer>© 2026 なるいまい All Rights Reserved.</footer>
+</body>
+</html>
